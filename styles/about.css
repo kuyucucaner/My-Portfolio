@@ -1,0 +1,256 @@
+body {
+    background: linear-gradient(to top, #252525, #555555, #252525);
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+
+nav {
+    width: 100%;
+    background-color: #252525;
+    color: white;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    position: fixed;
+    box-shadow: 3px 3px 6px rgb(0, 0, 0);
+}
+
+main {
+    text-align: center;
+    width: 100%;
+    flex-grow: 1; /* Allow main to grow and take available space */
+    padding-top: 120px;
+}
+
+footer {
+    background-color: #252525;
+    color: white;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around; /* Center the navigation items */
+
+}
+nav li {
+    margin-right: 100px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+
+.logo {
+    display: inline;
+    font-family: 'Black Ops One', cursive;
+    margin-left: 10px;
+    font-size: 24px;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease;
+}
+.logo:hover {
+    display: inline-block;
+    transform: scale(1.3);
+}
+.left {
+    margin-right: auto;
+}
+.right {
+    margin-left: auto;
+    background-image: linear-gradient(to right,
+            #AF0404,
+            #FF0000 50%,
+            #ffffff 50%);
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.right::before {
+    content: '';
+    background: #AF0404;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+}
+.right:hover {
+    background-position: 0;
+}
+.right:hover::before {
+    width: 100%;
+}
+
+.about-me {
+    color: #FF0000;
+    font-size: 30px;
+    text-shadow: 1px 1px 2px rgba(243, 8, 8, 0.5);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.introduce,
+.about-me,
+.skills-tools {
+    width: 50%; /* Set width to 100% for responsiveness */
+    text-align: center; /* Center the text */
+    margin: 0 auto; /* Center horizontally */
+}
+.skills-tools {
+    color: #FF0000;
+    border-bottom: #fff 1px solid;
+    font-size: 30px;
+    text-shadow: 1px 1px 2px rgba(243, 8, 8, 0.5);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.here {
+    font-size: 40px;
+    color: white;
+    margin: 0;
+    /* Başlık etiketlerinin varsayılan margin'larını sıfırlar */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.description {
+    font-size: 20px;
+    color: white;
+    overflow: hidden;
+    width: 100%; /* Set width to 100% for responsiveness */
+    text-overflow: ellipsis; 
+    margin-bottom: 60px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Flexbox özellikleri */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.description-container {
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 20px; /* Opsiyonel: Altında bir boşluk bırakmak için */
+}
+.skills-text{
+    margin-top: 20px;
+}
+.skills-one ,.skills-two , .skills-three{
+    margin-top:40px;
+}
+.skills-one .image , .skills-two .image ,.skills-three .image{
+    max-height: 90px;
+    max-width: 90px;
+    margin-left:30px;
+    width: 100%; /* Add this line for responsiveness */
+    height: auto; /* Add this line for responsiveness */
+}
+.reserved {
+    color: white;
+}
+.github,
+.linkedin {
+    margin-top: 10px;
+    background: linear-gradient(to right, #AF0404, #FF0000);
+    color: #fff;
+    padding: 10px 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 40px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.linkedin:hover,
+.github:hover {
+    background: linear-gradient(to right, #FF0000, #AF0404);
+    box-shadow: 2px 1px 3px #c42828;
+    transform: scale(1.1);
+}
+
+.linkedin {
+    margin-left: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    nav {
+        padding: 10px 5px;
+        position: relative;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 8px 0;
+        text-align: center;
+        transition: transform 0.3s ease-in-out;
+        width: 100%;
+        padding: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: white;
+        font-size: 15px;
+        display: block;
+    }
+    main {
+        padding-top: 60px; /* Adjust padding for smaller screens */
+    }
+
+    footer {
+        /* Remove margin-top */
+        margin-top: auto; /* Ensure the footer stays at the bottom */
+    }
+    .skills-one .image , .skills-two .image , .skills-three .image {
+        margin-right: 30px;
+    }
+    .pages {
+        margin-right: 40px;
+    }
+
+    .logo {
+        margin-right: 70px;
+    }
+    .about-me    {
+        font-size: 35px;
+    }
+    .here {
+        font-size: 40px;
+        /* Adjust font size for smaller screens */
+    }
+
+    .description {
+        font-size: 15px;
+   
+    }
+
+
+}
