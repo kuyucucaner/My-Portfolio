@@ -1,6 +1,6 @@
 # 🌐 My Portfolio
 
-**My Portfolio** is a personal portfolio website showcasing projects, skills, and contact information. It features a clean design with easy navigation between sections, allowing visitors to get to know the developer and their work.
+**My Portfolio** is a personal portfolio website showcasing projects, skills, and contact information. It features a clean design with easy navigation between sections, allowing visitors to get to know the developer and their work. 
 
 ---
 
